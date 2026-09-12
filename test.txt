@@ -1,0 +1,70 @@
+python -c "
+import asyncio;
+from src.scrapers.anti_bot import StealthBrowserPool;
+
+async def main():
+    async with StealthBrowserPool(pool_size=1, headless=True) as pool:
+        html = await pool.fetch_rendered('https://bot.sannysoft.com', wait_until='networkidle')
+        print('fetched', len(html) if html else 0, 'bytes')
+        # save it so you can open in a browser and visually check for red/failed rows
+        with open('stealth_check.html', 'w', encoding='utf-8') as f:
+            f.write(html or '');
+
+asyncio.run(main())
+"
+
+python -c "
+import asyncio
+from src.scrapers.anti_bot import StealthBrowserPool
+
+async def main():
+    async with StealthBrowserPool(pool_size=2) as pool:
+        html = await pool.fetch_rendered('<your target URL>', wait_selector='<a CSS selector you expect on the page>')
+        print('got content:', html is not None)
+        print('length:', len(html) if html else 0)
+
+asyncio.run(main())
+"
+
+python -c "
+import json
+from collections import Counter
+methods = Counter()
+low_confidence = []
+with open('data/output/entity_mapping_log.jsonl') as f:
+    for line in f:
+        e = json.loads(line)
+        methods[e['matchMethod']] += 1
+        if e['matchMethod'] == 'fuzzy' and e['matchScore'] < 95:
+            low_confidence.append(e)
+print('Method breakdown:', methods)
+print(f'{len(low_confidence)} fuzzy matches scored 90-94 — worth eyeballing for false positives:')
+for e in low_confidence[:20]:
+    print(' ', e['rawName'], '->', e['canonicalName'], e['matchScore'])
+"
+
+python -c "
+from src.resolver.entity_resolver import EntityResolver, load_seed_startups
+r = EntityResolver(canonical_seed=load_seed_startups())
+for name in ['Anthropic PBC', 'anthropic', 'ANTHROPIC INC', 'Anthr0pic', 'Some New Co LLC']:
+    print(f'{name!r:25} -> {r.resolve(name)!r}')
+for entry in r.log:
+    print(entry.rawName, '|', entry.canonicalName, '|', entry.matchMethod, '|', entry.matchScore)
+"
+
+python -c "
+import asyncio
+from src.llm.providers import GeminiFlashProvider, GroqLlamaProvider, DeepSeekProvider
+from src.llm.orchestrator import LLMOrchestrator, EXTRACTION_SYSTEM_PROMPT
+
+async def main():
+    chain = [GeminiFlashProvider(), GroqLlamaProvider(), DeepSeekProvider()]
+    orch = LLMOrchestrator(chain)
+    result = await orch.extract('Anthropic released Claude Sonnet 5 today.', EXTRACTION_SYSTEM_PROMPT)
+    print('success:', result.success)
+    print('provider_used:', result.provider_used)
+    print('attempts (chain walked):', result.attempts)
+    print('data:', result.data)
+
+asyncio.run(main())
+"

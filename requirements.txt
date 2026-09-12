@@ -1,0 +1,12 @@
+aiohttp>=3.9
+aiolimiter>=1.1
+tenacity>=8.2
+pydantic>=2.6
+python-dateutil>=2.9
+rapidfuzz>=3.6
+beautifulsoup4>=4.12
+lxml>=5.1
+feedparser>=6.0
+playwright>=1.42
+pytest>=8.0
+pytest-asyncio>=0.23
