@@ -1,0 +1,10 @@
+rawName,canonicalName,entityKind,matchMethod,matchScore,sourceRecordId
+"OpenAI, Inc.",OpenAI,STARTUP,exact,100.0,
+Open AI,OpenAI,STARTUP,exact,100.0,
+Anthropic PBC,Anthropic,STARTUP,exact,100.0,
+Mistral AI SAS,Mistral AI,STARTUP,exact,100.0,
+Totally New Stealth Startup,Totally New Stealth Startup,STARTUP,unmatched_new,0.0,
+OpenAI,OpenAI,PRODUCT,exact,100.0,
+Anthropic,Anthropic,PRODUCT,exact,100.0,
+Mistral AI,Mistral AI,PRODUCT,exact,100.0,
+OpenAI,OpenAI,STARTUP,exact,100.0,

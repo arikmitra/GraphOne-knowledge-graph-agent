@@ -1,0 +1,26 @@
+{
+  "run_id": "run_20260911T061257Z",
+  "phases": {
+    "startups_products": {
+      "duration_s": 11.49,
+      "startups": 916,
+      "products": 1000
+    },
+    "research_papers": {
+      "duration_s": 125.04,
+      "papers": 1000,
+      "with_github": 63
+    },
+    "news": {
+      "duration_s": 3.68,
+      "fresh_records": 17
+    },
+    "jobs": {
+      "duration_s": 3.83,
+      "fresh_records": 0
+    }
+  },
+  "total_duration_s": 144.27,
+  "rejects": 0,
+  "entity_resolutions": 1916
+}

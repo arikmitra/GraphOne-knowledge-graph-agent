@@ -1,0 +1,3 @@
+schemaVersion,recordType,source.name,source.url,collectedAt,extractionModel,rawContentHash,content.title,content.date,content.full_text,content.summary,content.url,content.related_entities
+1.0,NEWS,TechCrunch AI,https://example-news.com/a1,2026-09-11T06:17:26.304048Z,,,Anthropic raises new funding round,2026-09-11T03:17:25.909435Z,,,https://example-news.com/a1,
+1.0,NEWS,The Verge AI,https://example-news.com/a3,2026-09-11T06:17:26.304071Z,,,New model announced today,2026-09-11T06:17:25.909435Z,,,https://example-news.com/a3,

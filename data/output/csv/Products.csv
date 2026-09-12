@@ -1,0 +1,4 @@
+schemaVersion,recordType,source.name,source.url,collectedAt,extractionModel,rawContentHash,content.productName,content.startupName,content.canonicalStartupName,content.pricingModel,content.description,content.category
+1.0,PRODUCT,demo-source,https://openai.com/enterprise,2026-09-11T06:17:25.911470Z,,,ChatGPT Enterprise,OpenAI,OpenAI,ENTERPRISE,,
+1.0,PRODUCT,demo-source,https://claude.com/excel,2026-09-11T06:17:25.911599Z,,,Claude for Excel,Anthropic,Anthropic,FREEMIUM,,
+1.0,PRODUCT,demo-source,https://mistral.ai/chat,2026-09-11T06:17:25.911701Z,,,Le Chat,Mistral AI,Mistral AI,FREE,,

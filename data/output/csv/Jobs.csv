@@ -1,0 +1,2 @@
+schemaVersion,recordType,source.name,source.url,collectedAt,extractionModel,rawContentHash,content.title,content.company,content.canonicalCompany,content.date,content.is_remote,content.role_family,content.location,content.url
+1.0,JOB,OpenAI,https://jobs.example.com/j1,2026-09-11T06:17:26.304114Z,,,ML Infrastructure Engineer,OpenAI,OpenAI,2026-09-11T01:17:25.909435Z,True,Engineering,,https://jobs.example.com/j1

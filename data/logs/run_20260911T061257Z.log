@@ -1,0 +1,11 @@
+2026-09-11T11:42:57+0530 | INFO     | graphone.pipeline            | Phase I: scraping startups & products (target=1000/1000)
+2026-09-11T11:43:09+0530 | INFO     | graphone.pipeline            | Phase I done: 916 startups, 1000 products
+2026-09-11T11:43:09+0530 | INFO     | graphone.pipeline            | Phase I: scraping research papers (target=1000)
+2026-09-11T11:45:14+0530 | INFO     | graphone.pipeline            | Phase I done: 1000 papers (63 with GitHub links)
+2026-09-11T11:45:14+0530 | INFO     | graphone.pipeline            | Phase II: scraping news (5 sources, 24h freshness)
+2026-09-11T11:45:18+0530 | INFO     | graphone.pipeline            | Phase II done: 17 fresh news records
+2026-09-11T11:45:18+0530 | INFO     | graphone.pipeline            | Phase II: scraping jobs (5 boards, 24h freshness)
+2026-09-11T11:45:19+0530 | WARNING  | graphone.scrapers.news_jobs  | feed RemoteOK AI returned HTTP 410
+2026-09-11T11:45:19+0530 | WARNING  | graphone.scrapers.news_jobs  | feed Wellfound (AngelList) returned HTTP 403
+2026-09-11T11:45:21+0530 | INFO     | graphone.pipeline            | Phase II done: 0 fresh job records
+2026-09-11T11:45:22+0530 | INFO     | graphone.pipeline            | Pipeline run complete in 144.27s. Stats: {'run_id': 'run_20260911T061257Z', 'phases': {'startups_products': {'duration_s': 11.49, 'startups': 916, 'products': 1000}, 'research_papers': {'duration_s': 125.04, 'papers': 1000, 'with_github': 63}, 'news': {'duration_s': 3.68, 'fresh_records': 17}, 'jobs': {'duration_s': 3.83, 'fresh_records': 0}}, 'total_duration_s': 144.27, 'rejects': 0, 'entity_resolutions': 1916}

@@ -1,0 +1,6 @@
+schemaVersion,recordType,source.name,source.url,collectedAt,extractionModel,rawContentHash,content.entityName,content.canonicalName,content.data.employeeCount,content.data.industry,content.data.foundedYear,content.data.location,content.data.fundingStage,content.data.website
+1.0,STARTUP,demo-source,https://openai.com/about,2026-09-11T06:17:25.910498Z,,,"OpenAI, Inc.",OpenAI,3000,,,,,
+1.0,STARTUP,demo-source,https://news.ycombinator.com/item?id=1,2026-09-11T06:17:25.910664Z,,,Open AI,OpenAI,,,,,,
+1.0,STARTUP,demo-source,https://anthropic.com/company,2026-09-11T06:17:25.910786Z,,,Anthropic PBC,Anthropic,900,,,,,
+1.0,STARTUP,demo-source,https://mistral.ai/about,2026-09-11T06:17:25.910896Z,,,Mistral AI SAS,Mistral AI,150,,,,,
+1.0,STARTUP,demo-source,https://news.ycombinator.com/item?id=2,2026-09-11T06:17:25.911302Z,,,Totally New Stealth Startup,Totally New Stealth Startup,5,,,,,
