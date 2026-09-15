@@ -3,8 +3,7 @@
 A working, async, multi-source scraping + LLM-extraction pipeline for building an AI
 industry knowledge graph: startups, products, research papers, jobs, and news — with
 entity resolution (including an optional web-verification fallback for ambiguous names)
-and full audit logging. Built as a take-home deliverable for the GraphOne/FrontierAtlas
-AI Engineer trial (see `architecture.md` for the design writeup).
+and full audit logging. (see `architecture.md` for the design writeup).
 
 ## What's here
 
